@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+
+  header {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+
+  header nav a:hover {
+    text-decoration: underline;
+  }
+
+  .blog-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  article {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s;
+  }
+
+  article:hover {
+    transform: translateY(-10px);
+  }
+
+  article img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+
+  /* Pop-up styles */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 80%;
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+    display: none;
+  }
+
+  .popup img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .popup h2 {
+    margin-top: 10px;
+  }
+
+  .popup p {
+    margin: 15px 0;
+  }
+
+  .popup-close {
+    background: #ff5a5f;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .popup-close:hover {
+    background: #ff2a3a;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+  }

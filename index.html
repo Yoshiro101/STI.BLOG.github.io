@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Blog</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="post.html">Blog Post</a>
+    </nav>
+  </header>
+  <main>
+    <section class="blog-list">
+        <article>
+            <img src="blog1.jpg" alt="Blog 1" class="zoomable">
+            <h2><a href="#" class="read-more" 
+                  data-title="Blog Post Title 1" 
+                  data-content="Full content of blog post 1." 
+                  data-image="blog1.jpg">Blog Post Title 1</a></h2>
+                  
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+               <a href="#" class="read-more" 
+                  data-title="Blog Post Title 1" 
+                  data-content="Full content of blog post 1." 
+                  data-image="blog1.jpg">Read more...</a>
+            </p>
+          </article>
+          
+
+
+      <article>
+        <img src="blog2.jpg" alt="Blog 2" class="zoomable">
+        <h2><a href="#" class="read-more">Blog Post Title 2</a></h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            <a href="#" class="read-more" data-title="Blog Post Title 2" 
+            data-content="Full content of blog post 2." data-image="blog2.jpg">Read more...</a></p>
+      </article>
+
+
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 My Blog. All rights reserved.</p>
+  </footer>
+
+  <!-- Overlay and Pop-up -->
+  <div class="overlay"></div>
+  <div class="popup">
+    <img src="" alt="Popup Image" id="popup-image">
+    <h2 id="popup-title"></h2>
+    <p id="popup-content"></p>
+    <button class="popup-close">Close</button>
+  </div>
+
+  <script src="script.js">
+   
+  </script>
+</body>
+</html>

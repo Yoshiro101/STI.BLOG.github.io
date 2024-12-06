@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-hs.css"> <!-- Added HS-list specific stylesheet -->
 </head>
 <body>
   <header>
@@ -12,42 +13,63 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="post.html">Blog Post</a>
+      <a href="about.html">About</a> <!-- Optional about page link -->
     </nav>
   </header>
   <main>
-    <section class="blog-list">
-        <article>
-            <img src="blog1.jpg" alt="Blog 1" class="zoomable">
-            <h2><a href="#" class="read-more" 
-                  data-title="Blog Post Title 1" 
-                  data-content="Full content of blog post 1." 
-                  data-image="blog1.jpg">Blog Post Title 1</a></h2>
-                  
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-               <a href="#" class="read-more" 
-                  data-title="Blog Post Title 1" 
-                  data-content="Full content of blog post 1." 
-                  data-image="blog1.jpg">Read more...</a>
-            </p>
-          </article>
-          
-
-
+    <section class="BOTB-list"> <!-- BOTB list -->
+      <h2>BATTLE OF THE BANDS</h2> <!-- Title for BOTB-list -->
       <article>
-        <img src="blog2.jpg" alt="Blog 2" class="zoomable">
-        <h2><a href="#" class="read-more">Blog Post Title 2</a></h2>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-            <a href="#" class="read-more" data-title="Blog Post Title 2" 
-            data-content="Full content of blog post 2." data-image="blog2.jpg">Read more...</a></p>
+        <img src="MANIFESTO.png" alt="Blog 2" class="zoomable">
+        <h2><a href="#" class="read-more">MANIFESTO</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <a href="#" class="read-more" data-title="MANIFESTO"
+             data-content="MANIFESTOMANIFESTOMANIFESTO." data-image="MANIFESTO.png">Read more...</a></p>
       </article>
 
+      <article>
+        <img src="APEX.png" alt="APEX GEN 1" class="zoomable">
+        <h2><a href="#" class="read-more" data-title="APEX GEN 1"
+             data-content="APEX GEN1." data-image="APEX.png">APEX GEN 1</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <a href="#" class="read-more" data-title="APEX GEN 1"
+             data-content="burat burat burat." data-image="APEX.png">Read more...</a></p>
+      </article>
 
+      <article>
+        <img src="JETLAG.png" alt="JETLAG" class="zoomable">
+        <h2><a href="#" class="read-more" data-title="JETLAG"
+             data-content="Full content of blog post 1." data-image="JETLAG.png">JETLAG</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <a href="#" class="read-more" data-title="JETLAG" 
+            data-content="JETLAGJETLAGJETLAGJETLAG." data-image="JETLAG.png">Read more...</a></p>
+      </article>
+    </section>
+
+    <section class="HS-list"> <!-- HS list -->
+      <h2>HATAW SAYAW</h2> <!-- Title for HS-list -->
+      <article>
+        <img src="SILKNSNAP.png" alt="JETLAG" class="zoomable">
+        <h2><a href="#" class="read-more" data-title="JETLAG"
+             data-content="Full content of blog post 1." data-image="SILKNSNAP.png">Top 1 SILKNSNA -  STI Alabang</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <a href="#" class="read-more" data-title="SILKNSNAP" 
+            data-content="SILKNSNAP." data-image="SILKNSNAP.png">Read more...</a></p>
+      </article>
+
+      <article>
+        <img src="SILKNSNAP.png" alt="JETLAG" class="zoomable">
+        <h2><a href="#" class="read-more" data-title="JETLAG"
+             data-content="Full content of blog post 1." data-image="SILKNSNAP.png">Top 1 SILKNSNA -  STI Alabang</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <a href="#" class="read-more" data-title="SILKNSNAP" 
+            data-content="SILKNSNAP." data-image="SILKNSNAP.png">Read more...</a></p>
+      </article>
     </section>
   </main>
   <footer>
     <p>&copy; 2024 My Blog. All rights reserved.</p>
+    <p>Contact us at: <a href="mailto:contact@myblog.com">contact@myblog.com</a></p>
   </footer>
 
   <!-- Overlay and Pop-up -->
@@ -59,8 +81,6 @@
     <button class="popup-close">Close</button>
   </div>
 
-  <script src="script.js">
-   
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

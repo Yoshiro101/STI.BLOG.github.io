@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Home</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style-hs.css"> <!-- Added HS-list specific stylesheet -->
+  <link rel="stylesheet" href="style-hs.css">
 </head>
 <body>
   <header>
@@ -13,60 +13,64 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="post.html">Blog Post</a>
-      <a href="about.html">About</a> <!-- Optional about page link -->
+      <a href="about.html">About</a>
     </nav>
   </header>
+
   <main>
-    <section class="BOTB-list"> <!-- BOTB list -->
-      <h2>BATTLE OF THE BANDS</h2> <!-- Title for BOTB-list -->
-      <article>
-        <img src="MANIFESTO.png" alt="Blog 2" class="zoomable">
-        <h2><a href="#" class="read-more">MANIFESTO</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            <a href="#" class="read-more" data-title="MANIFESTO"
-             data-content="MANIFESTOMANIFESTOMANIFESTO." data-image="MANIFESTO.png">Read more...</a></p>
-      </article>
+    <section id="featured" class="featured">
+      <div class="container">
+        <h1 id="BOTBtitle">BATTLE OF THE BANDS</h1>
+        <div class="carousel">
+          <!-- BOTB-list Items -->
+          <div class="carousel-item botb">
+            <img src="MANIFESTO.png" alt="MANIFESTO">
+            <h3>MANIFESTO</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#" class="read-more" data-title="MANIFESTO" data-content="MANIFESTOMANIFESTOMANIFESTO." data-image="MANIFESTO.png">Read more...</a></p>
+          </div>
 
-      <article>
-        <img src="APEX.png" alt="APEX GEN 1" class="zoomable">
-        <h2><a href="#" class="read-more" data-title="APEX GEN 1"
-             data-content="APEX GEN1." data-image="APEX.png">APEX GEN 1</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            <a href="#" class="read-more" data-title="APEX GEN 1"
-             data-content="burat burat burat." data-image="APEX.png">Read more...</a></p>
-      </article>
+          <div class="carousel-item botb">
+            <img src="APEX.png" alt="APEX GEN 1">
+            <h3>APEX GEN 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#" class="read-more" data-title="APEX GEN 1" data-content="burat burat burat." data-image="APEX.png">Read more...</a></p>
+          </div>
 
-      <article>
-        <img src="JETLAG.png" alt="JETLAG" class="zoomable">
-        <h2><a href="#" class="read-more" data-title="JETLAG"
-             data-content="Full content of blog post 1." data-image="JETLAG.png">JETLAG</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            <a href="#" class="read-more" data-title="JETLAG" 
-            data-content="JETLAGJETLAGJETLAGJETLAG." data-image="JETLAG.png">Read more...</a></p>
-      </article>
+          <div class="carousel-item botb">
+            <img src="JETLAG.png" alt="JETLAG">
+            <h3>JETLAG</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#" class="read-more" data-title="JETLAG" data-content="JETLAGJETLAGJETLAGJETLAG." data-image="/images/JETLAG.png">Read more...</a></p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="HS-list"> <!-- HS list -->
-      <h2>HATAW SAYAW</h2> <!-- Title for HS-list -->
-      <article>
-        <img src="SILKNSNAP.png" alt="JETLAG" class="zoomable">
-        <h2><a href="#" class="read-more" data-title="JETLAG"
-             data-content="Full content of blog post 1." data-image="SILKNSNAP.png">Top 1 SILKNSNA -  STI Alabang</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            <a href="#" class="read-more" data-title="SILKNSNAP" 
-            data-content="SILKNSNAP." data-image="SILKNSNAP.png">Read more...</a></p>
-      </article>
+    <section id="featured" class="featured">
+      <div class="container">
+        <h1 id="HTtitle">HATAW SAYAW</h1>
+        <div class="carousel">
+          <!-- HS-list Items -->
+          <div class="carousel-item hs">
+            <img src="Mermaids.png" alt="Mermaids">
+            <h3>MANIFESTO</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#" class="read-more" data-title="Mermaids" data-content="MermaidsMermaidsMermaidsMermaids." data-image="Mermaids .png">Read more...</a></p>
+          </div>
 
-      <article>
-        <img src="SILKNSNAP.png" alt="JETLAG" class="zoomable">
-        <h2><a href="#" class="read-more" data-title="JETLAG"
-             data-content="Full content of blog post 1." data-image="SILKNSNAP.png">Top 1 SILKNSNA -  STI Alabang</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            <a href="#" class="read-more" data-title="SILKNSNAP" 
-            data-content="SILKNSNAP." data-image="SILKNSNAP.png">Read more...</a></p>
-      </article>
+          <div class="carousel-item hs">
+            <img src="APEX.png" alt="APEX GEN 1">
+            <h3>APEX GEN 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#" class="read-more" data-title="APEX GEN 1" data-content="burat burat burat." data-image="APEX.png">Read more...</a></p>
+          </div>
+
+          <div class="carousel-item hs">
+            <img src="JETLAG.png" alt="JETLAG">
+            <h3>JETLAG</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#" class="read-more" data-title="JETLAG" data-content="JETLAGJETLAGJETLAGJETLAG." data-image="/images/JETLAG.png">Read more...</a></p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2024 My Blog. All rights reserved.</p>
     <p>Contact us at: <a href="mailto:contact@myblog.com">contact@myblog.com</a></p>

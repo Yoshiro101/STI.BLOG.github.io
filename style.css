@@ -169,11 +169,14 @@ footer a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   display: none;
   z-index: 1001;
+  max-width: 500px;
+  width: 90%;
 }
 
 .popup img {
   width: 100%;
-  max-width: 400px;
+  height: auto;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -185,6 +188,10 @@ footer a:hover {
 
 .popup p {
   font-size: 1rem;
+  max-height: 100px; /* Limit the height of the text */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
 }
 
 .popup-close {
@@ -199,4 +206,36 @@ footer a:hover {
 
 .popup-close:hover {
   background: #0056b3;
+}
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 80%; /* Ensure it's responsive */
+  }
+
+  .carousel-item {
+    min-width: 280px;
+    max-width: 280px;
+  }
+
+  .read-more {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup {
+    width: 95%;
+  }
+
+  .popup p {
+    max-height: 80px; /* Allow more text to show on smaller screens */
+  }
+
+  .carousel-item {
+    min-width: 220px;
+    max-width: 220px;
+  }
 }

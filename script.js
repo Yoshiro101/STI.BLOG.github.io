@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const popupTitle = document.getElementById('popup-title');
   const popupContent = document.getElementById('popup-content');
   const popupClose = document.querySelector('.popup-close');
+  const seeMoreButton = document.querySelector('.see-more');
 
   // Show pop-up on "Read More" click
   readMoreLinks.forEach(link => {
@@ -73,5 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
       img.addEventListener('mouseleave', () => {
           img.style.transform = 'scale(1)'; // Reset the image scale
       });
+  });
+
+  // Toggle popup text expansion when "See More" button is clicked
+  seeMoreButton.addEventListener('click', () => {
+      popupContent.classList.toggle('expanded');
   });
 });

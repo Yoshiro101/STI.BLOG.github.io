@@ -31,17 +31,12 @@ header nav {
 }
 
 header nav a {
-  color: white;
   text-decoration: none;
   font-size: 1rem;
   padding: 8px 12px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.1); /* Subtle background for contrast */
 }
 
-header nav a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
 
 /* Featured Sections */
 .featured {

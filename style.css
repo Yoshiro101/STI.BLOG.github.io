@@ -35,6 +35,7 @@ header nav a {
   font-size: 1rem;
   padding: 8px 12px;
   border-radius: 5px;
+  
 }
 
 
@@ -68,6 +69,7 @@ header nav a {
   justify-content: center;
   gap: 20px;
   padding: 20px 0;
+ 
 }
 
 .carousel-item {
@@ -235,7 +237,101 @@ footer a:hover {
   }
 }
 
+/* Ribbon Styles */
+.ribbon {
+  position: absolute;
+  top: 20px; /* Adjust the vertical position */
+  left: -30px;
+  background: linear-gradient(90deg, #ffd700, #ffcc00); /* Default Gold */
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 5px 15px;
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add depth */
+  visibility: visible; /* Always visible */
+  opacity: 1; /* Ensure full visibility */
+  transition: none; /* Disable hover-based transitions */
+}
 
+/* Specific Ribbons */
+.ribbon-1st {
+  background: linear-gradient(90deg, #ffd700, #ffcc00); /* Gold */
+}
+
+.ribbon-2nd {
+  background: linear-gradient(90deg, #c0c0c0, #bfbfbf); /* Silver */
+}
+
+.ribbon-3rd {
+  background: linear-gradient(90deg, #cd7f32, #c06a1a); /* Bronze */
+}.zoomed-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.zoomed-popup img {
+  max-width: 90%;
+  max-height: 90%;
+}
+.zoomed-popup button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.zoomed-popup button:hover {
+  background-color: #0056b3;
+}
+/* Make the toolbar hidden initially */
+.toolbr {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 100%; /* Align to the right of the More button */
+  transform: translateY(-50%); /* Center vertically with More button */
+  background-color: #333; /* Dark background */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.toolbr button {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toolbr button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+.toolbtn {
+  background-color: #007BFF; /* Blue background for More button */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.toolbtn:hover {
+  background-color: #0056b3; /* Slightly darker blue on hover */
+}
 .btn1{
   font-size: 18px;
   color: #e1e1e1;

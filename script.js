@@ -1,83 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("Blog site is ready!");
+    console.log("Blog site is ready!");
 
-  // Select all the navigation links
-  const navLinks = document.querySelectorAll('header nav a');
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('header nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
+                behavior: 'smooth'
+            });
+        });
+    });
 
-  // Add smooth scrolling functionality to each navigation link
-  navLinks.forEach(link => {
-      link.addEventListener('click', (event) => {
-          event.preventDefault();  // Prevent the default anchor click behavior
-          
-          // Get the target section ID from the href attribute (strip off the # symbol)
-          const targetId = link.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
+    // Popup functionality
+    const readMoreLinks = document.querySelectorAll('.read-more');
+    const overlay = document.querySelector('.overlay');
+    const popup = document.querySelector('.popup');
+    const popupImage = document.getElementById('popup-image');
+    const popupTitle = document.getElementById('popup-title');
+    const popupContent = document.getElementById('popup-content');
+    const popupClose = document.querySelector('.popup-close');
 
-          // Smooth scroll to the target section with offset (to avoid header overlay)
-          window.scrollTo({
-              top: targetElement.offsetTop - document.querySelector('header').offsetHeight, // Adjust the scroll position by the height of the header
-              behavior: 'smooth'  // Apply smooth scrolling
-          });
-      });
-  });
+    readMoreLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const title = link.getAttribute('data-title');
+            const content = link.getAttribute('data-content');
+            const image = link.getAttribute('data-image');
 
-  // Popup functionality
-  const zoomableImages = document.querySelectorAll('.zoomable');
-  const readMoreLinks = document.querySelectorAll('.read-more');
-  const overlay = document.querySelector('.overlay');
-  const popup = document.querySelector('.popup');
-  const popupImage = document.getElementById('popup-image');
-  const popupTitle = document.getElementById('popup-title');
-  const popupContent = document.getElementById('popup-content');
-  const popupClose = document.querySelector('.popup-close');
-  const seeMoreButton = document.querySelector('.see-more');
+            popupTitle.textContent = title;
+            popupContent.textContent = content;
+            popupImage.src = image;
 
-  // Show pop-up on "Read More" click
-  readMoreLinks.forEach(link => {
-      link.addEventListener('click', (event) => {
-          event.preventDefault();  // Prevent default anchor click behavior
+            overlay.style.display = 'block';
+            popup.style.display = 'block';
+            popup.classList.add('fade-in'); // Animation
+            document.body.classList.add('no-scroll'); // Disable body scrolling
+        });
+    });
 
-          // Get the data attributes (title, content, and image) from the link
-          const title = link.getAttribute('data-title');
-          const content = link.getAttribute('data-content');
-          const image = link.getAttribute('data-image');
+    popupClose.addEventListener('click', closePopup);
+    overlay.addEventListener('click', closePopup);
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closePopup();
+    });
 
-          // Update the popup content with the data from the link
-          popupTitle.textContent = title;
-          popupContent.textContent = content;
-          popupImage.src = image;
+    function closePopup() {
+        popup.classList.remove('fade-in');
+        popup.classList.add('fade-out');
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            popup.style.display = 'none';
+            popup.classList.remove('fade-out');
+            document.body.classList.remove('no-scroll'); // Re-enable body scrolling
+        }, 200); // Match CSS animation duration
+    }
 
-          // Display the overlay and popup
-          overlay.style.display = 'block';
-          popup.style.display = 'block';
-      });
-  });
+    // Theme toggle functionality
+    const lightModeBtn = document.getElementById('light');
+    const darkModeBtn = document.getElementById('dark');
 
-  // Close the pop-up
-  popupClose.addEventListener('click', () => {
-      overlay.style.display = 'none';
-      popup.style.display = 'none';
-  });
+    lightModeBtn.addEventListener('click', () => {
+        document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-mode');
+    });
 
-  // Close pop-up if the overlay is clicked
-  overlay.addEventListener('click', () => {
-      overlay.style.display = 'none';
-      popup.style.display = 'none';
-  });
-
-  // Zoom effect for images
-  zoomableImages.forEach(img => {
-      img.addEventListener('mouseenter', () => {
-          img.style.transform = 'scale(1.1)'; // Zoom in the image
-      });
-
-      img.addEventListener('mouseleave', () => {
-          img.style.transform = 'scale(1)'; // Reset the image scale
-      });
-  });
-
-  // Toggle popup text expansion when "See More" button is clicked
-  seeMoreButton.addEventListener('click', () => {
-      popupContent.classList.toggle('expanded');
-  });
+    darkModeBtn.addEventListener('click', () => {
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+    });
 });
